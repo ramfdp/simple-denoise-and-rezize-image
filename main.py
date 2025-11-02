@@ -27,7 +27,7 @@ def denoise_and_save(image_path, output_folder):
 
     median_denoised_image = cv2.medianBlur(noisy_image, 9)
     bilateral_denoised_image = cv2.bilateralFilter(noisy_image, 15, 100, 100)
-    nlm_denoised_image = cv2.fastNlMeansDenoisingColored(noisy_image, None, 25, 25, 11, 35)
+    nlm_denoised_image = cv2.fastNlMeansDenoisingColored(noisy_image, None, 25, 25, 11, 30)
 
     base_name = os.path.basename(image_path)
     name, ext = os.path.splitext(base_name)
